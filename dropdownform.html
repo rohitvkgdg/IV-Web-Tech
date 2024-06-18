@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dropdown list with form tag</title>
+</head>
+
+<body>
+    <center>
+        <form>
+            <h4>Dropdown list with form tag</h4>
+            <label>Select an open elective course: </label>
+            <select name="ddlcourses">
+                <option value="0">--Select--</option>
+                <option value="1">Web Technology</option>
+                <option value="2">Advance Java</option>
+                <option value="3">Machine Learning</option>
+                <option value="4">PCPI</option>
+                <option value="5">Maths</option>
+            </select>
+            <button type="button" onclick="readDisplayValues(this.form)">Submit</button>
+            <br><br>
+        </form>
+        <label>Selected course: </label>
+        <span id="res"></span>
+    </center>
+    <script>
+        function readDisplayValues(frm) {
+            for (var i = 0; i < frm.ddlcourses.length; i++) {
+                if (frm.ddlcourses[i].selected) {
+                    document.getElementById("res").innerHTML = frm.ddlcourses[i].value;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

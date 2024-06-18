@@ -1,0 +1,78 @@
+body {
+    background-image: url('exam2.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+.container {
+    margin: 100px auto;
+    width: 90%;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    display: inline-block;
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.5s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #ff7f00; /* Darker orange */
+    color: white;
+}
+
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.result {
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50;
+    color: white;
+    line-height: 100px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px auto;
+        width: 80%;
+    }
+
+    .result {
+        font-size: 18px;
+    }
+}
+
+/* For screens larger than 600px and smaller than 1200px */
+@media (min-width: 601px) and (max-width: 1200px) {
+    .container {
+        margin: 50px auto;
+        width: 85%;
+    }
+
+    .result {
+        font-size: 22px;
+    }
+}

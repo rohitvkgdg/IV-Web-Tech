@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Form</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Course Registration Form</legend>
+        <form action="php_examples/reg_details.php" method="post">
+        <table>
+            <tr>
+                <td><label for="name">Enter the student name:</label></td>
+                <td><input type="text" name="Name" placeholder="Enter your name"></td>
+            </tr>
+            <tr>
+                <td><label for="ddl_usn">Enter the student USN:</label></td>
+                <td>
+                    <select name="ddl_usn">
+                        <option value="0">--Select USN--</option>
+                        <option value="1">2SD22C22073</option>
+                        <option value="2">2SD22C2292</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Select the Division:</label></td>
+                <td>
+                    <input type="radio" name="rddivision" value="A-Division">A-Division
+                    <input type="radio" name="rddivision" value="B-Division">B-Division
+                </td>
+            </tr>
+            <tr>
+                <td><label>Select the Courses:</label></td>
+                <td>
+                    <input type="checkbox" name="chkcourse" value="Web Tech">Web Tech
+                    <input type="checkbox" name="chkcourse" value="Java">Java
+                    <input type="checkbox" name="chkcourse" value="Python">Python
+                </td>
+            </tr>
+            <tr>
+                <td><label for="regdate">Enter registration date:</label></td>
+                <td><input type="date" name="regdate"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit" name="btnsubmit">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+    </fieldset>
+    <span id="display_result"></span>
+
+    <!-- <script type="text/javascript">
+        var division = null;
+        var chkcourse = "";
+
+        function display() {
+            var sname = document.getElementById("name").value;
+            var usn = document.getElementById("ddl_usn").value;
+            var rd_value = document.getElementsByName("rddivision");
+            if(sname != "" && usn != "-Select USN-" && rd_value != null ){
+                alert("Fill out the all detials");
+            }
+            for (var i = 0; i < rd_value.length; i++) {
+                if (rd_value[i].checked) {
+                    division = rd_value[i].value;
+                }
+            }
+            alert(division);
+            var chkvalue = document.getElementsByName("chkcourse");
+            for (var j = 0; j < chkvalue.length; j++) {
+                if (chkvalue[j].checked) {
+                    chkcourse += chkvalue[j].value + " ";
+                }
+            }
+            alert(chkcourse);
+            var dreg = document.getElementById("dtregistration").value;
+            
+            document.getElementById("display_result").innerHTML = "<table><tr><th>Name</th><th>USN</th><th>Courses</th><th>Date</th></tr></table>";
+        }
+    </script> -->
+    
+</body>
+
+</html>

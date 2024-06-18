@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameters</title>
+</head>
+
+<body>
+    <form method="post">
+        <center>
+            <label>Enter first String:</label><input type="text" id="txtstr1"><br>
+            <label>Enter second String:</label><input type="text" id="txtstr2"><br>
+            <button type="submit" onClick="concatStrings(this.form);">Submit</button>
+        </center>
+        <p id="res"></p>
+    </form>
+
+    <script>
+        function concatStrings(obj) {
+            var str1 = obj.txtstr1.value
+            var str2 = obj.txtstr2.value
+            var concatstr = str1 + str2;
+            document.getElementById("res").innerHTML = concatstr;
+        }
+    </script>
+</body>
+
+</html>

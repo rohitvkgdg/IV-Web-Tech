@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Course Registration Form</legend>
+        <table>
+            <tr>
+                <td><label>Enter the student name:</label></td>
+                <td>
+                    <input type="text" id="textname" placeholder="Enter Student Name" />
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Enter the student USN:</label></td>
+                <td>
+                    <select name="" id="ddl">
+                        <!-- ID USED TO LOCATE GUI COMPONENT -->
+                        <option>--Select USN--</option>
+                        <option>2SD22CS003</option>
+                        <option>2SD22CS004</option>
+                        <option>2SD22CS005</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td> <label>Select Division:
+                        <input type="radio" name="rdivision" id="A">A Division
+                        <input type="radio" name="rdivision" id="B">B Division</label></td>
+            </tr>
+            <td>
+                <label>Select Course: </label>
+            </td>
+            <td> 
+                <label for="checkbox"></label>
+                <input type="checkbox" name="chkcourses" id="mycheckbox"/>Web Technology</label>
+            </td>
+            <td>
+                <label for="checkbox">
+                <input type="checkbox" name="chkcourses" id="mycheckbox" />Java OOPS</label>
+            </td>
+            <td>
+                <label for="checkbox">
+                <input type="checkbox" name="chkcourses" id="mycheckbox" />PCPI</label>
+            </td>
+            <td>
+                <label for="checkbox">
+                <input type="checkbox" name="chkcourses" id="mycheckbox" />ADA</label>
+            </td>
+            <tr>
+                <td>
+                    <label for="date">Enter the date</label>
+                </td>
+                <td>
+                    <input type="date" name="dtregistration" id="dt">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5"><center><input type="button" onclick="displayInfo();" value="Register" name="MySubmit" id="MySubmit"></center>
+                    
+                </td>
+            </tr>
+        </table>
+        <div id="displayResult"></div>
+    </fieldset>
+    <script src="courseregister.js"></script>
+</body>
+
+</html>

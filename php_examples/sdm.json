@@ -1,0 +1,14 @@
+{
+    "SDMLib": [
+        {
+            "Title": "Happy Place",
+            "Author": "Cavendish",
+            "Price": "$300"
+        },
+        {
+            "Title": "C Prog",
+            "Author": "Dennis Richie",
+            "Price": "$50"
+        }
+    ]
+}

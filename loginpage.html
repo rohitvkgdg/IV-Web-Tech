@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form</title>
+</head>
+
+<body>
+    <form>
+        <fieldset style="background-color: rgb(207, 237, 171);">
+            <legend>Login Page</legend>
+            
+            <table>
+                <tr>
+                    <td><label>User Name:</label></td>
+                    <td><input type="text" name="txtbox" id="usname" /></td>
+                </tr>
+                <tr>
+                    <td><label>Password:</label></td>
+                    <td><input type="password" name="password"  id="pass" /></td>
+                </tr>
+                <tr>
+                    <td><input type="button" name="btn" value="Login" onclick="validatelogindetails" /></td>
+                    <td><input type="reset" value="Clear" name="btnclear" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><a href="signup_page.html">Sign Up</a></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+<script type="text/javascript">
+    function validatelogindetails() {
+        //read the text box values from the page
+        var username = document.getElementById("usname").value;
+        var password = document.getElementById("pass").value;
+        var pattern = /^[a-zA-Z\s]*$/;
+        if (username.match(pattern)){
+            alert("Username valid");
+        }
+        if (username == "rohan" && password == "1234") {
+            window.location("coursereg.html");
+        }
+        else {
+            alert("Invalid login details");
+        }
+    }
+</script>
+
+</html>

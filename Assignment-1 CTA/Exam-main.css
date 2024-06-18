@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: match-parent;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: #cc6060;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 15px;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.head img {
+    width: 200px;
+    max-width: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-content: flex-start;
+}
+
+.head {
+    display: flex;
+    width: match-parent;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 15px;
+    justify-content: space-between;
+}
+
+.title{
+    min-width: 20%;
+    width: fit-content;
+    align-items: center;
+}
+
+.spacing{
+    width:fit-content;
+    align-content: flex-end;
+
+}
+
+nav {
+    width: 100%;
+    background-color: #3498db;
+    padding: 14px 0;
+    text-align: center;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#quiz-container {
+    margin-bottom: 20px;
+}
+
+#question {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.choice {
+    margin: 10px;
+}
+
+#choices{
+    margin-top:500px;
+    margin-left: 30px;
+    margin: 30px;
+}
+
+#timer {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#submit {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reset {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffa200;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.operations{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    button {
+        margin: 10px;
+    }
+}
+
+#results {
+    font-size: 18px;
+    font-weight: bold;
+}

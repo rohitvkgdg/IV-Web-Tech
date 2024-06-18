@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination Portal</title>
+    <link rel="stylesheet" href="Exam-main.css">
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <img src="https://sdmcet.ac.in/wp-content/uploads/2024/01/logonew.png" alt="logo">
+            <div class="title">
+                <h1>CTA Quiz</h1>
+            </div>
+            <div class="spacing">Time left: <span id="timer">0 seconds</span></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Exam-landing.html">Home</a></li>
+                <li><a href="Exam-login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form action="" method="get">
+        <div id="quiz-container">
+            <div class="question">Put your question here"?"
+                <input type="radio" id="q1choice1" name="question1" class="choice">
+                <label for="choice1">Option 1</label>
+                <br>
+                <input type="radio" id="q1choice2" name="question1" class="choice">
+                <label for="choice2">Option 2</label>
+                <br>
+                <input type="radio" id="q1choice3" name="question1" class="choice">
+                <label for="choice3">Option 3</label>
+                <br>
+                <input type="radio" id="q1choice4" name="question1" class="choice">
+                <label for="choice4">Option 4</label>
+                <br>
+            </div>
+
+            <div class="question">Put your question here"?"
+                <input type="radio" id="q2choice1" name="question2" class="choice">
+                <label for="choice1">Option 1</label>
+                <br>
+                <input type="radio" id="q2choice2" name="question2" class="choice">
+                <label for="choice2">Option 2</label>
+                <br>
+                <input type="radio" id="q2choice3" name="question2" class="choice">
+                <label for="choice3">Option 3</label>
+                <br>
+                <input type="radio" id="q2choice4" name="question2" class="choice">
+                <label for="choice4">Option 4</label>
+                <br>
+            </div>
+
+            <div class="question">Put your question here"?"
+                <input type="radio" id="q3choice1" name="question3" class="choice">
+                <label for="choice1">Option 1</label>
+                <br>
+                <input type="radio" id="q3choice2" name="question3" class="choice">
+                <label for="choice2">Option 2</label>
+                <br>
+                <input type="radio" id="q3choice3" name="question3" class="choice">
+                <label for="choice3">Option 3</label>
+                <br>
+                <input type="radio" id="q3choice4" name="question3" class="choice">
+                <label for="choice4">Option 4</label>
+                <br>
+            </div>
+
+            <div class="operations">
+                <button id="submit">Submit</button>
+                <button type="reset" id="reset">Reset</button>
+            </div>
+    </form>
+
+    <div id="results"></div>
+    <script>
+        document.getElementById('submit').addEventListener('click', function (event) {
+            event.preventDefault();
+            var selectedAnswers = [];
+            var questions = document.querySelectorAll('#quiz-container .question');
+
+            questions.forEach(function (question) {
+                var answer = question.querySelector('.choice:checked');
+
+                if (answer) {
+                    selectedAnswers.push(answer.id);
+                }
+            });
+
+            // Array of correct answer ids
+            var correctAnswers = ['q1choice2', 'q2choice3', 'q3choice3'];
+
+            // Calculate the score
+            var score = 0;
+            for (var i = 0; i < selectedAnswers.length; i++) {
+                if (selectedAnswers[i] === correctAnswers[i]) {
+                    score++;
+                }
+            }
+
+            // Store the score in localStorage
+            localStorage.setItem('score', score);
+            window.location = "Exam-result.html";
+        });
+        //Code for timer
+        var timerElement = document.getElementById('timer');
+        var seconds = 60;
+
+        function startTimer() {
+            setInterval(updateTimer, 1000);
+        }
+
+        function updateTimer() {
+            seconds--;
+            timerElement.textContent = seconds + ' seconds';
+            if (seconds == 0) {
+                alert("Session timed out, login again");
+                window.location = "Exam-result.html";
+            }
+        }
+
+        startTimer();
+    </script>
+</body>
+
+</html>

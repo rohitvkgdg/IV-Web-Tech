@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition</title>
+    <script src="main.js">
+        function sum(){
+            let res = parseInt(document.getElementById(n1).value) + parseInt(document.getElementById(n2).value)
+            document.getElementById('res').innerHTML= `${res}`;
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label>Enter the first number: </label></td>
+            <td><input type="number" id="n1"></td>
+        </tr>
+        <tr>
+            <td><label>Enter the second number: </label></td>
+            <td><input type="number" id="n2"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="submit" onclick="sum()">Submit</button></td>
+        </tr>
+    </table>
+    <span id="res"></span>
+</body>
+</html>

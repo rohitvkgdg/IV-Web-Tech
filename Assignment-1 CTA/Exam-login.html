@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Exam-login.css">
+</head>
+<body>
+    <header>
+        <div class="head">
+            <img src="https://sdmcet.ac.in/wp-content/uploads/2024/01/logonew.png" alt="logo">
+            <div class="heading">
+                <h2>EXAMINATION PORTAL</h2>
+            </div>
+            <div class="space"></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Exam-landing.html">Home</a></li>  
+            </ul>
+        </nav>
+    </header>
+    <div class="login-container">
+        <h2>Student Login</h2>
+        <form onsubmit="validateLogin(); return false;"> <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Shri Dharmasthala Manjunatheswara College of Engineering & Technology, Dharwad</p>
+    </footer>
+
+    <script src="Exam-login.js"></script>
+</body>
+</html>

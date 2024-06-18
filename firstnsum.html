@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sum of n</title>
+</head>
+<body>
+    <form action="php_examples/firstnsum.php" method="post" onsubmit="return validatedata();">
+        <h2>Sum of first n natural numbers</h2>
+        <label for="num">Enter a number:</label>
+        <input type="number" name="num" id="num">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<script>
+    function validatedata(){
+        var num = document.getElementById("num").value;
+        var numpattern = /^[0-9]*$/;
+        if(num!=NaN && num!=""){
+            if(numpattern.match(num)){
+                return true;
+            }
+            else{
+                alert("Please enter a valid number");
+                return false;
+            }
+        }
+        else{
+            alert("Please enter a number");
+            return false;
+        }
+    }
+</script>
+</html>

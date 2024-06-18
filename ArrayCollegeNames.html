@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array with push and pop operation</title>
+</head>
+
+<body>
+    <center>
+        <label>Enter the college name: </label>
+        <input type="text" id="clgname"><br>
+        <button type="button" value="Insert" onclick="saveValues();">Insert</button>
+        <button type="button" value="Delete" onclick="removeValues();">Delete</button>
+        <button type="button" value="Display" onclick="display();">Display</button>
+        <div id="clgnames"></div>
+    </center>
+</body>
+<script>
+    var clgdata = [];
+    function saveValues() {
+        var value = document.getElementById("clgname").value;
+        if (value != "") {
+            clgdata.push(value);
+            document.getElementById("clgname").value = "";
+        }
+        else {
+            alert("Enter the college name!");
+        }
+    }
+
+    function removeValues() {
+        if (clgdata.length > 0) {
+            clgdata.pop();
+        }
+        else {
+            alert("Array is empty, cannot delete!");
+        }
+    }
+
+    function display() {
+        var arrlen = clgdata.length;
+        if (arrlen > 0) {
+            document.getElementById("clgnames").innerHTML = "List of colleges: <br>";
+            for (let i = 0; i < arrlen; i++) {
+                document.getElementById("clgnames").innerHTML += clgdata[i] + "<br>";
+            }
+        }
+        else {
+            document.getElementById("clgnames").innerHTML = "";
+            alert("No records yet");
+        }
+    }
+
+</script>
+
+</html>
